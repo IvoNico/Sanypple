@@ -3,14 +3,20 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .navBar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    height: 1vh;
+    width: 100%;
+}
+.navbar-logo{
+    float: left;
 }
 .navbar-list{
     display: flex;
     flex-direction: row;
+    padding: 7px 5px;
+    margin-right: 15px;
+    float: right;
 }
 .list-button{
     margin-left: 8px;
@@ -18,7 +24,74 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    line-height: 5vh;
+
+}
+.list-button:hover{
+    background-color: black;
+    color: white;
+    transition: 0.5s ;
+    border-radius: 8px;
+    margin-top: 0.5em;
 }
 .active{
     border-bottom: solid 2px black;
+}
+.btnMenu{
+    display: flex;
+    flex-direction: row;
+}
+.checkBtn{
+    cursor: pointer;
+    width: 20px;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+/*RESPONSIVE*/
+
+@media (max-width:858px){
+    .navBar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .checkBtn{
+        display: block;
+        width: 50px;
+    }
+    .navbar-list{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.515);
+        color: white;
+        margin-top: 5vh;
+        left: -100%;
+        transition:all .5s;
+    }
+    .active{
+        border: none;
+    }
+    .list-button{
+        display: block;
+        margin: 25px 0;
+        line-height: 15px;
+    }
+    .navbar-logo{
+        width: 50px;
+        height: 5vh;
+    }
+    .list-button:hover{
+        background-color: none;
+        color: white;
+        cursor: pointer;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
 }
