@@ -1,9 +1,11 @@
 import React from 'react';
-
 import './NavBar.css'
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
+import CartWidget from '../CartWidget/CartWidget'
 
-export default function NavBar(){
+export const NavBar = props => {
+    const {section} = props;
+    const liActive = <li className='list-button active'> {section} </li>
     return(
         <nav className='navBar'>
             <input type='checkbox' id='check' />
@@ -11,14 +13,15 @@ export default function NavBar(){
                 <MenuOpenIcon/>
             </label>
             <img className='navbar-logo' src='../image/Sanypple-logo.png' alt='Imagen del logo representativo a Sanypple technology'/>
-            
             <ul className='navbar-list'>
-                <li className='list-button active'> Home</li>
+                {liActive}
                 <li className='list-button'> Productos</li>
                 <li className='list-button'> Nosotros</li>
                 <li className='list-button'> Contacto</li>
             </ul>
+            <CartWidget/>
         </nav>
     )
 }
 
+export default NavBar

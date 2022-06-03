@@ -5,11 +5,18 @@
 }
 
 .navBar{
-    height: 1vh;
+    margin: 0 auto;
+    height: 10vh;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 .navbar-logo{
     float: left;
+    margin: 0 8px;
+    display: flex;
+    width: 50px;
 }
 .navbar-list{
     display: flex;
