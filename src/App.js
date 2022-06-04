@@ -10,7 +10,7 @@ function App() {
         <NavBar section='Home'/>
       </header>
       <main>
-        <ItemsListContainer/>
+        <ItemsListContainer title='Sanypple'/>
       </main>
     </div>
   );
