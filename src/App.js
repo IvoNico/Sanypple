@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <NavBar section='Home'/>
+        <NavBar section='chau'/>
       </header>
       <main>
         <ItemsListContainer title='Sanypple'/>
