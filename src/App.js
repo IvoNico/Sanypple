@@ -1,13 +1,13 @@
-
+import React from 'react'
 import './App.css';
-import NavBar from './components/NavBar/Navbar'
 import ItemsListContainer from './components/ItemsListConteiner/ItemsListConteiner';
+import NavBar from './components/NavBar/Navbar'
 
 function App() {
   return (
     <div className="App">
       <header>
-        <NavBar section='chau'/>
+        <NavBar/>
       </header>
       <main>
         <ItemsListContainer title='Sanypple'/>

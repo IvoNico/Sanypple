@@ -1,8 +1,11 @@
 import React from 'react'
+import ItemCount from '../ItemsCount/ItemsCount'
 
-function ItemsListContainer (props) {
-    const {title} = props
-    return <h1> {title} </h1>
+function ItemsListContainer ({title}) {
+    return (<>
+                <h1> {title} </h1>
+                <ItemCount/>
+            </>)
 }
 
 export default ItemsListContainer

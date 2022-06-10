@@ -12,7 +12,7 @@ export const NavBar = props => {
             <label for='check' className='checkBtn'>
                 <MenuOpenIcon/>
             </label>
-            <img className='navbar-logo' src='../image/Sanypple-logo.png' alt='Imagen del logo representativo a Sanypple technology'/>
+            <img className='navbar-logo' src='../image/Banners-logo/Sanypple-logo.png' alt='Imagen del logo representativo a Sanypple technology'/>
             <ul className='navbar-list'>
                 {liActive}
                 <li className='list-button'> Productos</li>
