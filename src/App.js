@@ -3,6 +3,8 @@ import './App.css';
 import ItemsListContainer from './components/ItemsListConteiner/ItemsListConteiner';
 import NavBar from './components/NavBar/Navbar'
 
+
+
 function App() {
   return (
     <div className="App">
@@ -11,6 +13,7 @@ function App() {
       </header>
       <main>
         <ItemsListContainer title='Sanypple'/>
+        
       </main>
     </div>
   );

@@ -7,5 +7,57 @@
 .sectionItems{
     display: flex;
     flex-direction: row;
-    
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/*SECTION BANNERS*/
+
+.sectionBanners{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.bannerApple, .bannerSony{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* BANNER APPLE*/
+.bannerApple:hover, .bannerSony:hover{
+    transform: scale(0.9, 0.9);
+    opacity: 0.9;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+.bannerApple img{
+    width: clamp(15rem, 35rem, 50rem);
+    margin: 15px 15px;
+}
+
+
+.bannerApple h2, .bannerApple h4, .bannerSony h2, .bannerSony h4{
+    margin: 35px 0px 0px 0px;
+    font-size: 4rem;
+    position: absolute;
+    display: flex;
+    color: white;
+}
+
+.bannerApple h4, .bannerSony h4{
+    font-size:2rem;
+    margin-top: 125px ;
+}
+
+/* BANNER SONY*/
+.bannerSony img{
+    width: clamp(10rem, 52rem, 70rem);
+}
+.bannerSony h2, .bannerSony h4{
+    color: black;
 }
