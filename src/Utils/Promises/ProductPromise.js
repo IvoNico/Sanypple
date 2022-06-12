@@ -1,10 +1,10 @@
 
 
-const promiseProduct = ({time, data})=>{
+const promiseProduct = (time, data)=>{
     return new Promise ((resolve)=>{
-        setTimeout(()=>{
+        setTimeout(()=>
             resolve(data)
-        })
+        )
     }, time)
 }
 

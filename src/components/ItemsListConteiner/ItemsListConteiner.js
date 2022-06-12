@@ -3,6 +3,7 @@ import ItemCount from '../ItemsCount/ItemsCount'
 import promiseProduct from '../../Utils/Promises/ProductPromise'
 import dataProducts from '../../Utils/Products/Products'
 import ItemsList from '../ItemsList/ItemsList'
+import './ItemsContainer.css'
 
 
 function ItemsListContainer ({title}) {
@@ -16,7 +17,7 @@ function ItemsListContainer ({title}) {
     return (<>
                 <h1> {title} </h1>
                 <ItemCount stock={10} initial={0} />
-                <section>
+                <section className="sectionItems">
                     <ItemsList  products={items} />
                 </section>
                 

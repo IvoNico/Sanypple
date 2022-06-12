@@ -2,22 +2,22 @@ export const dataProducts =[
     {
         id: '1',
         name: 'Iphone 13',
-        price: 'USD$25.000.000',
-        image: 'public/image/Products/Apple/iphone-13.png',
+        price: '$349.316',
+        image: '/image/Products/Apple/iphone-13.png',
         stock: '5'
     },
     {
         id: '2',
         name: 'Samsung S22',
-        price: 'USD$25.000.000',
-        image: 'public/image/Products/Samsung/s22.webp',
+        price: '$209.999',
+        image: '/image/Products/Samsung/A33.png',
         stock: '5'
     },
     {
         id: '3',
-        name: 'TV Sony',
-        price: 'USD$25.000.000',
-        image: 'public/image/Products/Sony/tv.webp',
+        name: 'Sony Xperia',
+        price: '$699.999',
+        image: '/image/Products/Sony/Xperia.png',
         stock: '5'
     }
 ]

@@ -5,7 +5,7 @@ function ItemsList ({products}) {
     console.log(products)
     return (
         products.map(p =>
-            <Items {...p} />
+            <Items key={p.id} {...p} />
         )
     )
 }
