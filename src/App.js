@@ -1,7 +1,9 @@
 import React from 'react'
 import './App.css';
 import ItemsListContainer from './components/ItemsListConteiner/ItemsListConteiner';
+import ItemsDetailsContainer  from './components/ItemsDetailContainer/ItemsDetailContainer';
 import NavBar from './components/NavBar/Navbar'
+
 
 
 
@@ -12,8 +14,8 @@ function App() {
         <NavBar section={"Home"} />
       </header>
       <main>
-        <ItemsListContainer title='Sanypple'/>
-        
+        <ItemsListContainer/>
+        <ItemsDetailsContainer/>
       </main>
     </div>
   );

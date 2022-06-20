@@ -1,0 +1,71 @@
+.itemDetail{
+    margin: 35px auto;
+    padding: 0px 35px;
+    max-width: 1000px;
+    height: 85vh;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.053);
+    justify-content: center;
+    display:grid;
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "imgDetail  sectionDetails sectionDetails"
+    "bannerDetail ";
+}
+
+.imgDetail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 80px;
+    overflow: hidden; /* sirve para posicionar un elemento encima del otro*/
+    width: clamp(10rem, 26rem, 30rem);
+    position: relative
+}
+.itemsArrow{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.arrowRight, .arrowLeft{
+    right: 0;
+    background: none;
+    border: none;
+}
+.imgDetail img{
+    width: 100%;
+}
+
+.sectionDetails h2{
+    font-size: 5rem;
+}
+
+.sectionDetails h4 {
+    font-size: 2rem;
+}
+.sectionDetails button{
+    padding: 3px 3px;
+    border-radius: 8px;
+    background-color: black;
+    color:white;
+}
+.sectionDetails button:hover{
+    background-color: rgba(0, 0, 0, 0.642);
+}
+
+.bannerDetail{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.bannerDetail img{
+    width: clamp(8rem, 25rem, 25rem);
+}
+.bannerDetail h2{
+    font-size: 3.5rem;
+    margin: 35px 35px;
+}

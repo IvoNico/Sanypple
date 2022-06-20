@@ -28,7 +28,7 @@
     align-items: center;
 }
 /* BANNER APPLE*/
-.bannerApple:hover, .bannerSony:hover{
+.bannerApple:hover, .bannerSony:hover, .bannerSamsung:hover{
     transform: scale(0.9, 0.9);
     opacity: 0.9;
     transition: all 1s ease;
@@ -45,7 +45,6 @@
     margin: 35px 0px 0px 0px;
     font-size: 4rem;
     position: absolute;
-    display: flex;
     color: white;
 }
 
@@ -60,4 +59,25 @@
 }
 .bannerSony h2, .bannerSony h4{
     color: black;
+}
+
+/*BANNER SAMSUNG*/
+.bannerSamsung{
+    margin-bottom: 100px;
+}
+.bannerSamsung img{
+    width: clamp(10rem, 80rem, 90rem);
+}
+.bannerSamsung h2{
+    position: absolute;
+    color: white;
+    font-size: 4rem;
+    margin: 100px 100px 100px 100px;
+}
+
+.bannerSamsung h4{
+    position: absolute;
+    color: white;
+    font-size: 2rem;
+    margin: 200px 100px 100px 100px;
 }

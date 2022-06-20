@@ -1,7 +1,7 @@
 
 
 const promiseProduct = (time, data)=>{
-    return new Promise ((resolve)=>{
+    return new Promise ((resolve, reject)=>{
         setTimeout(()=>
             resolve(data)
         )

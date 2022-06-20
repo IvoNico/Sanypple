@@ -20,7 +20,7 @@ function ItemsListContainer ({title}) {
                 <section className="sectionBanners">
                     <ItemsBanners clase={"bannerApple"} title={"Apple"} subtitle={'Love the power'} image={'/image/Banners-logo/apple.jpg'} alt={"Banner de la marca Apple"}/>
                     <ItemsBanners clase={"bannerSony"} title={"Sony"} subtitle={'Never Off'} image={'/image/Banners-logo/Sony.webp'} alt={"Banner de la marca Sony"}/>
-                    <ItemsBanners clase={"bannerSamsung"} title={"Samsung"} subtitle={''} image={'/image/Banners-logo/samsung.webp'} alt={"Banner de la marca Samsung"}/>
+                    <ItemsBanners clase={"bannerSamsung"} title={"Samsung"} subtitle={'Discover the latest business innovations'} image={'/image/Banners-logo/samsung.webp'} alt={"Banner de la marca Samsung"}/>
                 </section>
                 <section className="sectionItems">
                     <ItemsList  products={items} />
