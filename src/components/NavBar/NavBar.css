@@ -31,18 +31,50 @@
     line-height: 5vh;
     font-size: 20px;
     font-weight: bold;
-
+    color: black;
 }
-.list-button:hover{
+.list-buttonProduct{
+    margin-left: 8px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    line-height: 5vh;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.list-button:hover, .list-buttonProduct:hover{
     background-color: black;
     color: white;
     transition: 0.5s ;
     border-radius: 8px;
     margin-top: 0.5em;
 }
-.active{
+.listCategory{
+    position: absolute;
+    list-style: none;
+    background-color: #000000;
+    text-align: left;
+    padding: 10px;
+    display: none;
+    margin-top: 192px;
+    font-size: 1rem;
+    border-radius: 15px;
+    z-index: 100;
+    }
+.categoryProduct{
+    list-style: none;
+    color:white
+}
+.list-buttonProduct:hover .listCategory {
+    display: flex;
+    flex-direction: column;
+    }
+.active, .activeProduct{
     border-bottom: solid 2px black;
 }
+
 .btnMenu{
     display: flex;
     flex-direction: row;

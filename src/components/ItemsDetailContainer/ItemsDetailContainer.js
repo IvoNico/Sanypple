@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react"
+import {  useParams } from "react-router-dom"
 import dataProducts from "../../Utils/Products/Products"
 import  ItemsDetail  from "../ItemsDetail/ItemsDetail"
 
 
 
-export function ItemsDetailsContainer () {
+function ItemsDetailsContainer () {
     const [data, setData] = useState({})
-
+    const {id} = useParams()
     useEffect(()=>{
         const getItem = () =>{
             return new Promise ((resolve) =>{
@@ -15,8 +16,8 @@ export function ItemsDetailsContainer () {
                 }, 2000)
             })
         }
-        getItem().then(res => setData(res.find(producto => producto.id === '1')))
-    }, [data])
+        getItem().then(res => setData(res.find(producto => producto.id === id)))
+    }, [id])
     console.log(data)
     return <section>
             {

@@ -1,6 +1,6 @@
 
 
-const promiseProduct = (time, data)=>{
+const PromiseProduct = (time, data)=>{
     return new Promise ((resolve, reject)=>{
         setTimeout(()=>
             resolve(data)
@@ -8,4 +8,4 @@ const promiseProduct = (time, data)=>{
     }, time)
 }
 
-export default promiseProduct;
+export default PromiseProduct;

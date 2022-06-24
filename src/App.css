@@ -3,7 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Mukta', sans-serif;
-  
+  list-style: none;
+  text-decoration: none;
 }
 .App {
   text-align: center;
