@@ -12,7 +12,7 @@ function ItemsListContainer ({title}) {
     const {categoryId} = useParams()
     useEffect(() =>{
         PromiseProduct(3000, dataProducts) //le pedimos a la App que cuando se monte nos traiga la promesa de productos
-        .then(data => {categoryId ? data.filter(data => data.categoryId === categoryId) : setItems(data)}) //todas las promesas se resuelven con .then para setiar el resultado y se modifique (el array vacio en este caso)
+        .then(data => {categoryId ? setItems(data.filter(data => data.category === categoryId)) : setItems(data)}) //todas las promesas se resuelven con .then para setiar el resultado y se modifique (el array vacio en este caso)
     }, [categoryId])
     return (<>
                 <h1> {title} </h1>
