@@ -26,7 +26,7 @@ const dataProducts =[
         name: 'Sony Xperia',
         price: '$699.999',
         image: '/image/Products/Sony/estesony.png',
-        stock: '5'
+        stock: '10'
     },
     {
         id: "4",

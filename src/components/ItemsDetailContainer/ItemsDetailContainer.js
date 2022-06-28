@@ -10,15 +10,16 @@ function ItemsDetailsContainer () {
     const {id} = useParams()
     useEffect(()=>{
         const getItem = () =>{
-            return new Promise ((resolve) =>{
+            return new Promise ((resolve, reject) =>{
                 setTimeout(()=>{
-                    resolve(dataProducts)
+                    if(data){resolve(dataProducts)}
+                    else{ reject('Error al cargar el producto')}
                 }, 2000)
             })
         }
         getItem().then(res => setData(res.find(producto => producto.id === id)))
-    }, [id])
-    console.log(data)
+                .catch(err => {'Error' (err)})
+    }, [data, id])
     return <section>
             {
                 <ItemsDetail {...data}/>

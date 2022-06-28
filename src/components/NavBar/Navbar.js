@@ -9,12 +9,12 @@ export const NavBar = () => {
     return(
         <nav className='navBar'>
             <input type='checkbox' id='check' />
-            <label for='check' className='checkBtn'>
+            <label htmlFor='check' className='checkBtn'>
                 <MenuOpenIcon/>
             </label>
             <Link to='/'> <img className='navbar-logo' src='../image/Banners-logo/Sanypple-logo.png' alt='Imagen del logo representativo a Sanypple technology'/> </Link>
             <ul className='navbar-list'>
-                <NavLink to='/' className='list-button' activeClassName='active' >Home</NavLink>
+                <NavLink to='/' className='list-button' activeclassname='active' >Home</NavLink>
                 <ul className='list-buttonProduct'>
                     <li>productos</li>
                     <ul  className="listCategory">
