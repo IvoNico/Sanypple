@@ -4,10 +4,6 @@ import './App.css';
 import { AppRouting } from './components/AppRouting/AppRouting';
 
 
-
-
-
-
 function App() {
   return (
     <div className="App">
