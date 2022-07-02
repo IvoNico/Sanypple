@@ -4,14 +4,17 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ItemsCount from '../ItemsCount/ItemsCount';
 import { Link } from 'react-router-dom';
+import {useState} from 'react'
+
 
 
 export function ItemsDetail  ({image, image2, image3, name, features, price, banner, bannertitle, stock}) {
-    const onAdd = (quantityToAdd) => {
-        console.log(`Agregaste ${quantityToAdd} productos al carrito.`)
+    const [quantity, setQuantity] = useState(0)  
+    
+    const onAdd = (quantityToAdd) => {  // guarda el estado del count
+        setQuantity(quantityToAdd)
     }
-    
-    
+
     return  <>
         <article className='itemDetail' >
             <div className='itemsArrow'>
@@ -28,8 +31,11 @@ export function ItemsDetail  ({image, image2, image3, name, features, price, ban
             <h2>{name}</h2>
             <p> {features} </p>
             <h4> {price} </h4>
-            <ItemsCount stock={stock} initial={0} onAdd={onAdd}  />
-            <Link to='/cart' > Finalizar Compra</Link>
+            {
+                quantity <1? <ItemsCount stock={stock} initial={0} onAdd={onAdd}  /> // indicamos que se va a ejecutar ITEMS COUNT cuando la cantidad de productos seleccionados sea CERO 
+                : <Link to='/cart' > Finalizar Compra</Link> // y cuando se agregue al carrito solo se va a mostrar FINALIZAR LA COMPRA 
+            }
+            
         </div>
         </article>
         <div className='bannerDetail'>

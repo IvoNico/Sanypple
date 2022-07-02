@@ -17,5 +17,6 @@ export const AppRouting = () =>{
             <Route path="/item/:id" element={<ItemsDetailsContainer/>}/>
             <Route path="/cart" element={<Cart/>}/>
         </Routes>
+        
     </BrowserRouter>
 } 
