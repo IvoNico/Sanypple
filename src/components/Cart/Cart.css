@@ -1,0 +1,15 @@
+.cart-titles{
+    margin: 0 auto;
+    width: 90%;
+}
+
+.cart-items{
+    border-bottom: 1px solid black;
+}
+.cart-atributes{
+    background-color: rgba(0, 0, 0, 0.338);
+}
+
+.img-product{
+    width: 50px;
+}

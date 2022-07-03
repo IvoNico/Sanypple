@@ -1,30 +1,57 @@
 /* eslint-disable array-callback-return */
 import { useContext } from "react"
 import { CartContext } from '../../Utils/CartContext/CartContext';
+import './Cart.css'
 
 
-const Cart = () =>{
+function Cart() {
 
-    const {addItem} = useContext(CartContext)
-
-    return(
-        <container>
-            {
-                addItem.length > 0 && (
-                    addItem.map((products)=>{
-                        <div key={products.id}>
-                            <h3>
-                                {products.name}
-                            </h3>
-                            <h3>
-                                {products.price}
-                            </h3>
-                        </div>
+    const { cart, clear, removeItem } = useContext(CartContext);
+    console.log(cart);
+    return (
+        <section>
+            <h1>Carrito de compras</h1>
+            <div className="cart">
+                <table className="cart-titles">
+                    <tr className="cart-atributes">
+                        <th>image</th>
+                        <th>name</th>
+                        <th>price</th>
+                        <th>cantidad</th>
+                        <th>Remove</th>
+                    </tr>
+                {cart.length > 0 && (
+                    cart.map((products) => {
+                        return (
+                            <tr key={products.id} className="cart-products">
+                                <td className="cart-items">
+                                    <img className="img-product" src={products.image} alt="" />
+                                </td>
+                                <td className="cart-items">
+                                    <h3>
+                                        {products.name}
+                                    </h3>
+                                </td>
+                                <td className="cart-items" >
+                                    <h3>
+                                        {products.price}
+                                    </h3>
+                                </td>
+                                <td className="cart-items">
+                                    <span> {products.quantityToAdd} </span>
+                                </td>
+                                <td className="cart-items">
+                                    <button onClick={removeItem}> X </button>
+                                </td>
+                            </tr>
+                        );
                     })
-                )
-            }
-        </container>
-    )
+                )}
+                </table>
+                <button onClick={clear}> Clear to Cart </button>
+            </div>
+        </section>
+    );
 }
 
 export default Cart
