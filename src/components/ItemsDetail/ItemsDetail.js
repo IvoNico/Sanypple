@@ -16,7 +16,7 @@ export function ItemsDetail  ({image, image2, image3, name, features, price, ban
 
     const onAdd = (quantityToAdd) => {  // guarda el estado del count
         setQuantity(quantityToAdd)
-        addItem({image,name,price, quantityToAdd, id})
+        addItem({image,name,price, id}, quantityToAdd)
     }
 
     return  <> 

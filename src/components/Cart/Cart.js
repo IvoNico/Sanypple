@@ -38,10 +38,10 @@ function Cart() {
                                     </h3>
                                 </td>
                                 <td className="cart-items">
-                                    <span> {products.quantityToAdd} </span>
+                                    <span> {products.quantity} </span>
                                 </td>
                                 <td className="cart-items">
-                                    <button onClick={removeItem}> X </button>
+                                    <button onClick={()=>removeItem(products)}> X </button>
                                 </td>
                             </tr>
                         );
