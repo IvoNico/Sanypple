@@ -13,3 +13,30 @@
 .img-product{
     width: 50px;
 }
+
+.emptyCart{
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.053);
+    width: 40%;
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.224);
+}
+
+.emptyCart img{
+    width: clamp(20rem, 30rem, 50rem)
+}
+
+.btnEmptyCart .btnContinueCart{
+    color: white;
+    background-color: black;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.btnEmptyCart:hover .btnContinueCart:hover{
+    background-color: rgba(0, 0, 0, 0.642);
+}

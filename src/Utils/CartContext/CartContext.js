@@ -8,11 +8,15 @@ console.log(CartContext)
 const CartContextProvider = ({children}) =>{
     // aca va a ir todo lo que quiero usar
     const [cart, setCart] = useState([]) //array de objeto de lo que vamos a agregar al carrito
-
+    
+    const totalPrice = () =>{ // (prev es un acumulador)    se le pasa la funcion y un numero inicial
+        return cart.reduce((prev, act) => prev + act.quantity * act.price, 0)
+    }
     const clear = () => setCart([]) //indicamos que nos devuelva un carrito(array) vacio
 
-    const removeItem = (item) => {
-        setCart(cart.filter(cart => cart.id !== item.id))
+    
+    function removeItem(item) {
+        setCart(cart.filter(cart => cart.id !== item.id));
     }
     
     const amountOfCart = () =>{ //le indicamos al carrito que nos muestre la cantidad de productos agregados
@@ -43,7 +47,8 @@ const CartContextProvider = ({children}) =>{
         clear,
         IsInCart,
         removeItem,
-        amountOfCart
+        amountOfCart,
+        totalPrice
         }}>
             {children}
         </CartContext.Provider>
