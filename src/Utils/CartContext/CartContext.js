@@ -1,6 +1,7 @@
 import { createContext, useState } from "react";
 
 
+
 export const CartContext = createContext()
 console.log(CartContext)
 
@@ -13,6 +14,7 @@ const CartContextProvider = ({children}) =>{
         return cart.reduce((prev, act) => prev + act.quantity * act.price, 0)
     }
     const clear = () => setCart([]) //indicamos que nos devuelva un carrito(array) vacio
+    
 
     
     function removeItem(item) {
@@ -31,6 +33,7 @@ const CartContextProvider = ({children}) =>{
             setCart(cart.map(product=>{
                 return product.id === item.id ? {...product, quantity: product.quantity + quantity}
                 : product
+                
             }))
         }else{
             setCart([...cart,{...item, quantity}])

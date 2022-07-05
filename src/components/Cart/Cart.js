@@ -6,12 +6,8 @@ import './Cart.css'
 
 
 function Cart() {
-
     const { cart, clear, removeItem, totalPrice } = useContext(CartContext);
     
-    
-
-    console.log(cart);
     return (
         <section>
             {cart.length > 0 && ( //indicamos que si el carrito es mayor a cero unidades, nos devuelva los productos mapeados
