@@ -17,8 +17,7 @@ const ItemsCount = ({stock, initial, onAdd}) =>{
         theme:"dark",
         colorProgress: "green"
         });
-
-   
+        
 //SUMAR PRODUCTOS
     const AddProduct = () =>{
         if(count <= stock ){
