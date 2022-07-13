@@ -9,7 +9,7 @@ import './Cart.css'
 
 
 function Cart() {
-    const { cart, clear, removeItem, totalPrice, decreaseProduct } = useContext(CartContext);
+    const { cart, clear, removeItem, totalPrice, decreaseProduct, increaseProduct } = useContext(CartContext);
     const [openModal, setOpenModal] = useState(false)// utilizamos para abrir o cerra el modal
     const [orderId, setOrderId] = useState()
     const [buyerData, setBuyerData] = useState(
@@ -74,8 +74,9 @@ function Cart() {
                                             </h3>
                                         </td>
                                         <td className="cart-items">
+                                        <button onClick={()=>increaseProduct(products)} >+</button>
                                             <span> {products.quantity} </span>
-                                            <button onClick={decreaseProduct} >-</button>
+                                            <button onClick={()=>decreaseProduct(products)} >-</button>
                                         </td>
                                         <td className="cart-items">
                                             <span> ${products.price * products.quantity} </span>

@@ -16,10 +16,25 @@ const CartContextProvider = ({children}) =>{
     
     const clear = () => setCart([]) //indicamos que nos devuelva un carrito(array) vacio
     
-    const decreaseProduct = () =>{
-        if(productQuantity >= 1){
-            setProductQuantity(productQuantity - 1);
-            setCart(cart.id, productQuantity)
+    const decreaseProduct = (item) =>{
+        const existProduct = cart.find((product) => product.id === item.id)
+        if(existProduct.quantity === 1){
+            setCart(cart.filter(cart => cart.id !== item.id));
+        }else{
+            setCart(
+                cart.map((product)=> product.id === item.id ? {...existProduct, quantity: existProduct.quantity - 1}
+                : product)
+            )
+        }
+    }
+
+    const increaseProduct = (item)=>{
+        const existProduct = cart.find((product) => product.id === item.id);
+        if(existProduct.quantity >= 1){
+            setCart(
+                cart.map((product)=> product.id === item.id ? {...existProduct, quantity: existProduct.quantity + 1}
+                : product)
+            )
         }
     }
     
@@ -57,7 +72,8 @@ const CartContextProvider = ({children}) =>{
         removeItem,
         amountOfCart,
         totalPrice,
-        decreaseProduct
+        decreaseProduct,
+        increaseProduct
         }}>
             {children}
         </CartContext.Provider>
