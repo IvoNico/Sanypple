@@ -12,35 +12,24 @@ function Cart() {
     const { cart, clear, removeItem, totalPrice, decreaseProduct } = useContext(CartContext);
     const [openModal, setOpenModal] = useState(false)// utilizamos para abrir o cerra el modal
     const [orderId, setOrderId] = useState()
-    const [buyerData, setBayerData] = useState(
+    const [buyerData, setBuyerData] = useState(
         {name: '', email: '', phone:' '})
+    
 
-    const [orderData, setOrderData] = useState({
-        items: cart.map( (products)=> {
-            return {
-                id: products.id,
-                name: products.name,
-                price: products.price
-            }
-            }),
-        total: totalPrice()
-        }
-    )
     const handleInputChange = (event) =>{
         console.log(event.target.value)
-        setBayerData({
+        setBuyerData({
             ...buyerData,
             [event.target.name]: event.target.value
         })
     }
     function handleSubmit(e) {
         e.preventDefault();
-        setOrderData(
-            {...orderData}
-        )
+        
         const order = {
-            buyer: {buyerData}, 
-            item: {orderData}
+            buyer: buyerData, 
+            item: cart,
+            total: totalPrice
         }
         
 
@@ -48,7 +37,7 @@ function Cart() {
         const ordersCollection = collection(db, 'orders');
         addDoc(ordersCollection, order) 
             .then(({ id }) => setOrderId(id))
-            .catch(err => console.log(`Error en procesar el pago ${err}`));
+            .catch(err => console.log(`${err}: Error en procesar el pago`));
     }
     
     return (
@@ -107,7 +96,7 @@ function Cart() {
                     </div>
                     <div className="checkoutComplete">
                         <h3>Checkout</h3>
-                        <p>Precio Total: ${totalPrice()}</p>
+                        <p>Precio Total: ${totalPrice}</p>
                         <Button className='completeBuy' onClick={() => setOpenModal(true)}>Completar Compra</Button>
                     </div>
                 </div>

@@ -11,9 +11,9 @@ const CartContextProvider = ({children}) =>{
     const [cart, setCart] = useState([]) //array de objeto de lo que vamos a agregar al carrito
     const [productQuantity, setProductQuantity] = useState(cart.quantity)
     
-    const totalPrice = () =>{ // (prev es un acumulador)    se le pasa la funcion y un numero inicial
-        return cart.reduce((prev, act) => prev + act.quantity * act.price, 0)
-    }
+    const totalPrice = cart.reduce((prev, act) => prev + act.quantity * act.price, 0)
+                        // (prev es un acumulador)    se le pasa la funcion y un numero inicial
+    
     const clear = () => setCart([]) //indicamos que nos devuelva un carrito(array) vacio
     
     const decreaseProduct = () =>{
