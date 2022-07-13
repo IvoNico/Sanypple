@@ -66,7 +66,8 @@
 
 /*BANNER SAMSUNG*/
 .bannerSamsung{
-    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 40px;
 }
 .bannerSamsung img{
     width: clamp(10rem, 80rem, 90rem);

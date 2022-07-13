@@ -18,6 +18,7 @@ function ItemsListContainer ({title}) {
             getDocs(productsCollection).then((snapshot) =>{
                 setItems(snapshot.docs.map((doc)=>({id: doc.id, ...doc.data()})))
             })
+            .catch(err => console.log(`Error en la busqueda del producto ${err}`))
         }else{
             const productsCollection = query(
                 collection(db, "productos")
@@ -25,12 +26,13 @@ function ItemsListContainer ({title}) {
             getDocs(productsCollection).then((snapshot) =>{
                 setItems(snapshot.docs.map((doc)=>({id: doc.id, ...doc.data()})))
             })
+            .catch(err => console.log(`Error en la busqueda del producto ${err}`))
         }
     }, [categoryId])
     return (<>
                 <h1> {title} </h1>
                 <section className="sectionBanners">
-                    <ItemsBanners clase={"bannerApple"} title={"Apple"} subtitle={'Love the power'} image={'/image/Banners-logo/apple.jpg'} alt={"Banner de la marca Apple"}/>
+                    <ItemsBanners clase={"bannerSamsung"} title={"Samsung"} subtitle={'Love the power'} image={'/image/Banners-logo/samsung.webp'} alt={"Banner de la marca Apple"}/>
                     
                 </section>
                 <section  className="sectionItems">

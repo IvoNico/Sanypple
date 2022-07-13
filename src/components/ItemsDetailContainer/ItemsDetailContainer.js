@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import {  useParams } from "react-router-dom"
 import {doc, getDoc, getFirestore} from 'firebase/firestore'
-import dataProducts from "../../Utils/Products/Products"
+
 import  ItemsDetail  from "../ItemsDetail/ItemsDetail"
 
 
@@ -17,6 +17,7 @@ function ItemsDetailsContainer () {
                 setData({id: snapshot.id, ...snapshot.data()})
             }
         })
+        .catch(err => console.log(`Porducto no encontrado ${err}`))
     }, [data, id])
     return <section>
             {
