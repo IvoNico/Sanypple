@@ -1,5 +1,6 @@
+
 .itemDetail{
-    margin: 35px auto;
+    margin: 5px auto;
     padding: 0px 35px;
     max-width: 1000px;
     height: 85vh;
@@ -14,32 +15,23 @@
     "bannerDetail ";
 }
 
+
 .imgDetail{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 80px 80px;
+    margin: 20px 80px;
     overflow: hidden; /* sirve para posicionar un elemento encima del otro*/
     width: clamp(10rem, 26rem, 30rem);
     position: relative
 }
-.itemsArrow{
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
-.arrowRight, .arrowLeft{
-    right: 0;
-    background: none;
-    border: none;
-}
+
 .imgDetail img{
     width: 100%;
 }
 
 .sectionDetails h2{
-    font-size: 5rem;
+    font-size: 2rem;
 }
 
 .sectionDetails h4 {
@@ -68,4 +60,17 @@
 .bannerDetail h2{
     font-size: 3.5rem;
     margin: 35px 35px;
+}
+
+.bannerDetail{
+    display: flex;
+    flex-direction: column;
+}
+
+.bannerDetail img{
+    margin: 50px;
+    width: 99%;
+    height: 50vh;
+    
+    
 }

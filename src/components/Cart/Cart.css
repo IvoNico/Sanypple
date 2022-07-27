@@ -1,3 +1,4 @@
+
 .cart-titles{
     margin: 0 auto;
     width: 90%;
@@ -5,6 +6,7 @@
 
 .cart-items{
     border-bottom: 1px solid black;
+    font-size: 1.3rem;
 }
 .cart-atributes{
     background-color: rgba(0, 0, 0, 0.338);
@@ -26,7 +28,7 @@
 }
 
 .emptyCart img{
-    width: clamp(20rem, 30rem, 50rem)
+    width:20rem
 }
 
 .btnEmptyCart{
@@ -42,7 +44,11 @@
     line-height: 24.5px;
     letter-spacing: 0.39px;
 }
-
+.cartBtn{
+    border:none;
+    background-color:white;
+    
+}
 .btnClear{
     margin-bottom: 5px;
     border-radius: 4px;
@@ -78,15 +84,19 @@
     flex-direction: row;
     justify-content: space-between;
 }
-.form{
-    display: flex;
-    flex-direction: column;
-    padding: 25px;
-}
+
 .orderNumber{
     margin: 50px auto;
     display: flex;
     flex-direction: column;
     text-align: center;
     width: 500px;
+}
+
+/* Responsive */
+@media (max-width:858px){
+    .emptyCart img{
+        width:6rem
+    }
+    
 }

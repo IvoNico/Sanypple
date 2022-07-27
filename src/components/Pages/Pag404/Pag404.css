@@ -1,0 +1,19 @@
+.pag404{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+}
+.pag404 img{
+    width: 50%;
+}
+
+.linkInicio{
+    font-size: 2rem;
+    border: 2px solid;
+    border-radius: 5px ;
+    background-color: black;
+    list-style: none;
+    color: white;
+    margin-bottom: 80px;
+}

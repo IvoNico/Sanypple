@@ -2,10 +2,11 @@ import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import {collection, getDocs, getFirestore, query, where} from 'firebase/firestore'
 import ItemsList from '../ItemsList/ItemsList'
-import ItemsBanners from '../ItemsBanner/ItemsBanner'
+import UncontrolledExample from '../../Utils/Carrousel/Carrousel'
 import './ItemsContainer.css'
 
-function ItemsListContainer ({title}) {
+function ItemsListContainer () {
+
     const [items, setItems] = useState([]) //Como lo que va a devolver es un array, se comienza con [vacio]
     const {categoryId} = useParams()
     useEffect(() =>{
@@ -29,17 +30,21 @@ function ItemsListContainer ({title}) {
             .catch(err => console.log(`Error en la busqueda del producto ${err}`))
         }
     }, [categoryId])
+    
     return (<>
-                <h1> {title} </h1>
+    
+                <h1 className="listContainerTitle"> Sanypple Technology </h1>
                 <section className="sectionBanners">
-                    <ItemsBanners clase={"bannerSamsung"} title={"Samsung"} subtitle={'Love the power'} image={'/image/Banners-logo/samsung.webp'} alt={"Banner de la marca Apple"}/>
-                    
+                    <UncontrolledExample image={'../image/Banners-logo/Apple-banner.svg'}
+                    image2={'../image/Banners-logo/Samsung-banner.svg'} image3={'../image/Banners-logo/Sony-banner.svg'}/>
                 </section>
                 <section  className="sectionItems">
-                    <ItemsList  products={items} />
+                    <h2>Productos {categoryId} </h2>
+                    <div className="itemsList">
+                        <ItemsList  products={items}/> 
+                    </div>
                 </section>
                 
             </>)
 }
-
 export default ItemsListContainer
