@@ -49,7 +49,7 @@
     transition: 0.5s ;
     border-radius: 8px;
     margin-top: 0.5em;
-    margin-right: 1rem;
+    
 }
 .buttonProducts:hover{
     color: white;
@@ -79,7 +79,8 @@
 }
 .list-buttonProduct:hover .listCategory {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    margin-top: 180px;
     }
 
 
@@ -150,8 +151,12 @@
         margin-top: 10px;
         font-size: 1rem;
         border-radius: 15px;
-        
         }
+        .list-buttonProduct:hover .listCategory {
+            display: flex;
+            flex-direction: row;
+            margin-top: 10px;
+            }
         .categoryProduct{
             color:black;
         }
