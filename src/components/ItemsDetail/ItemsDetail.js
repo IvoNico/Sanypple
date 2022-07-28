@@ -40,8 +40,8 @@ export function ItemsDetail  ({image, image2, image3, name, features, price, ban
                 </article>
                 <div className='bannerDetail'>
                     <h2> El producto que buscas a un paso de conseguirlo </h2>
-                    <img src={banner} alt=''/>
-                    <img src={banner2} alt=''/>
+                    <img src={banner} alt='Imagen de banners productos'/>
+                    <img src={banner2} alt='Imagen de banners productos'/>
                 </div>
         </section>
         

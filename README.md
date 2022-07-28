@@ -10,11 +10,11 @@ E-commerce de productos tecnologicos ficticia realizada para el proyecto final e
 - AppRouting para comunicarse con los diferentes componentes.
 - Se realizaron los componentes de forma que puedan ser reutilizados.
 - Los componentes creados en este proyecto son:
-- Navbar
-Catálogo
-Detalle de producto
-CartContext
-CartWidget
+- Navbar,
+Catálogo,
+Detalle de producto,
+CartContext,
+CartWidget,
 Formulario de compra
 - Se utilizo boostrap y mui para iconos y componentes como los carousel.
 

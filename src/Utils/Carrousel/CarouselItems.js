@@ -8,7 +8,7 @@ return (
         <img
           className="d-block w-100"
           src={image}
-          alt="First slide"
+          alt="Imagen producto"
         />
        
       </Carousel.Item>
@@ -16,14 +16,14 @@ return (
         <img
           className="d-block w-100"
           src={image2}
-          alt="Second slide"
+          alt="Imagen producto"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
           src={image3}
-          alt="Third slide"
+          alt="Imagen Producto"
         />
       </Carousel.Item>
     </Carousel>

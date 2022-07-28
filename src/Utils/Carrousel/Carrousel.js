@@ -9,7 +9,7 @@ function UncontrolledExample({image,image2,image3}) {
         <img
           className="d-block w-100 carouselImg"
           src={image}
-          alt="First slide"
+          alt="Banner de marca apple"
         />
         <Carousel.Caption>
           <h3 className='carouselTitle'>Apple</h3>
@@ -19,7 +19,7 @@ function UncontrolledExample({image,image2,image3}) {
         <img
           className="d-block w-100 carouselImg"
           src={image2}
-          alt="Second slide"
+          alt="Banner de marca Samsung"
         />
 
         <Carousel.Caption>
@@ -30,7 +30,7 @@ function UncontrolledExample({image,image2,image3}) {
         <img
           className="d-block w-100 carouselImg"
           src={image3}
-          alt="Third slide"
+          alt="Banner de marca Sony"
         />
         <Carousel.Caption>
           <h3 className='carouselTitle'>Sony</h3>
