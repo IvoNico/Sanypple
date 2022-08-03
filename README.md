@@ -1,7 +1,7 @@
 # Sanypple technology
 ### Ivo Nicolás Chapochnikoff
 
-[https://sanypple-ivochapochnikoff.vercel.app/]
+[https://sanypple.vercel.app/]
 
 E-commerce de productos tecnologicos ficticia realizada para el proyecto final en el curso React JS dictado por CoderHouse.
 
