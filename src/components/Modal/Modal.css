@@ -1,5 +1,5 @@
-.modal{
-    margin: 0 auto;
-    width: 80%;
-    height: 100vh;
+.btnModal{
+    border-radius: 8px;
+    background-color: black;
+    color:white;
 }

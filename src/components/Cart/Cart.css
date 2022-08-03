@@ -3,6 +3,9 @@
     margin: 0 auto;
     width: 90%;
 }
+.sectionCart{
+    margin-bottom: 150px;
+}
 
 .cart-items{
     border-bottom: 1px solid black;

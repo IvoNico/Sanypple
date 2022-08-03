@@ -1,10 +1,9 @@
 /* eslint-disable array-callback-return */
 import { useContext, useState } from "react"
 import { Link } from "react-router-dom";
-import { Button } from '@mui/material';
 import { CartContext } from '../../Utils/CartContext/CartContext';
 import { FormData } from "../FormData/FormaData";
-import Modal from '../Modal/Modal'
+import {Example } from '../Modal/Modal'
 import {addDoc, collection, getFirestore} from 'firebase/firestore'
 import './Cart.css'
 
@@ -38,7 +37,7 @@ function Cart() {
             .catch(err => console.log(`${err}: Error en procesar el pago`));
     }
     return (
-        <section>
+        <section className="sectionCart">
             {cart.length > 0 && ( //indicamos que si el carrito es mayor a cero unidades, nos devuelva los productos mapeados
             <div className="cart">
                 <h1>Carrito de compras</h1>
@@ -88,13 +87,8 @@ function Cart() {
                     <button onClick={clear} className="btnClear" >Limpiar carrito</button>
                     <Link className="btnContinueCart" to='/'>Continuar comprando</Link>
                     </div>
-                    <div className="checkoutComplete">
-                        <h3>Checkout</h3>
-                        <p>Precio Total: ${totalPrice}</p>
-                        <Button className='completeBuy' onClick={() => setOpenModal(true)}>Completar Compra</Button>
-                    </div>
                 </div>
-            <Modal handleClose={() => setOpenModal(false)} open={openModal}>
+            <Example handleClose={() => setOpenModal(false)} open={openModal}>
                 {orderId ? (
             <div className="orderNumber">
                 <h3>Orden generada correctamente</h3>
@@ -103,7 +97,7 @@ function Cart() {
                 ) : (
                 <FormData handleSubmit={handleSubmit} handleInput={handleInputChange}  />
                 )}
-            </Modal>
+            </Example>
             </div>
             )}
             {cart.length === 0 && ( //indicamos que si no hay productos en el carrito nos devuelva una imagen y un link a seguir comprando

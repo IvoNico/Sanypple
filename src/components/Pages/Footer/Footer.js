@@ -8,9 +8,9 @@ export const Footer = () =>{
     return(<section className='footer'>
         <div className='footerSections'>
             <h3>Páginas</h3>
-            <span>Home</span>
-            <span>Productos</span>
-            <span>Nosotros</span>
+            <Link to='/' className='footerLinks' >Home</Link>
+            <Link to='/' className='footerLinks' >Productos</Link>
+            <Link to='/Nosotros' className='footerLinks'> Nosotros</Link>
         </div>
         <div className='footerSections'>
             <h3>Marcas</h3>
